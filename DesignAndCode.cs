@@ -9,24 +9,22 @@ namespace M05_UF3_EntregaP4_DesignAndCode
         public class Usuario
         {
             public int idUser;
-            public string nombre;
-            public string apellidos;
-            public string dni;
-            public string direccion;
-            public string telefono;
-            public string email;
+            private string nombre;
+            private string apellidos;
+            private string dni;
+            private string direccion;
+            private string telefono;
+            private string email;
             public string username;
             public string password;
             public ListaDeseos listaDeseos;
             public CarritoCompra carritoCompra;
-
             public void VerificaPassword(string password) { }
             public void CambiaPassword(string viejoPassword, string nuevoPassword) { }
             public void AgregarListaDeseos(Producto productoDeseado) { }
             public void QuitarListaDeseos(Producto productoNoDeseado) { }
             public void AgregarResena(Producto productoResena, Resena resena) { }
             public void QuitarResena(Producto productoBorraResena, Resena resena) { }
-
         }
 
 
@@ -42,7 +40,6 @@ namespace M05_UF3_EntregaP4_DesignAndCode
             public Categoria categoria;
             public List<string> etiqueta;
             public List<Resena> resena;
-
         }
 
 
@@ -62,9 +59,7 @@ namespace M05_UF3_EntregaP4_DesignAndCode
         {
             public List <DetallePedido> productoPedido;
             public float precioPedido;
-
             public void AgregarDetallePedido(DetallePedido detallePedido) { }
-
         }
 
         public class DetallePedido
@@ -81,9 +76,7 @@ namespace M05_UF3_EntregaP4_DesignAndCode
             public int numeroPedido;
             public Usuario usuario;
             public DateTime fechaPedido;
-
             public void UsuarioPedido(Usuario usuarioPedido) { }
-
         }
         
         public class Resena
@@ -92,8 +85,5 @@ namespace M05_UF3_EntregaP4_DesignAndCode
             public int valoracionResena;
             public string comentarioResena;
         }
-
-
-
     }
 }
