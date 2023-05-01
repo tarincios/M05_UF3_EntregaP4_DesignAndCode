@@ -20,11 +20,12 @@ namespace M05_UF3_EntregaP4_DesignAndCode
             public ListaDeseos listaDeseos;
             public CarritoCompra carritoCompra;
 
-            public void AddListaDeseos(Producto productoDeseado)
-            {
-
-            }
-
+            public void VerificaPassword(string password) { }
+            public void CambiaPassword(string viejoPassword, string nuevoPassword) { }
+            public void AgregarListaDeseos(Producto productoDeseado) { }
+            public void QuitarListaDeseos(Producto productoNoDeseado) { }
+            public void AgregarResena(Producto productoResena, Resena resena) { }
+            public void QuitarResena(Producto productoBorraResena, Resena resena) { }
 
         }
 
@@ -61,6 +62,9 @@ namespace M05_UF3_EntregaP4_DesignAndCode
         {
             public List <DetallePedido> productoPedido;
             public float precioPedido;
+
+            public void AgregarDetallePedido(DetallePedido detallePedido) { }
+
         }
 
         public class DetallePedido
@@ -68,6 +72,8 @@ namespace M05_UF3_EntregaP4_DesignAndCode
             public Producto productoPedido;
             public int cantidad;
             public float precioProducto;
+
+            public void AgregarProductoPedido(Producto producto, int cantidad, float precio) { }
         }
 
         public class Pedido: CarritoCompra
@@ -75,6 +81,8 @@ namespace M05_UF3_EntregaP4_DesignAndCode
             public int numeroPedido;
             public Usuario usuario;
             public DateTime fechaPedido;
+
+            public void UsuarioPedido(Usuario usuarioPedido) { }
 
         }
         
