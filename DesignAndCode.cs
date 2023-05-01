@@ -6,18 +6,9 @@ namespace M05_UF3_EntregaP4_DesignAndCode
 {
     internal class DesignAndCode
     {
-        public class WebService
-        {
-            public WebService()
-            {
-
-            }
-        }
-
-
         public class Usuario
         {
-            public int id;
+            public int idUser;
             public string nombre;
             public string apellidos;
             public string dni;
@@ -26,31 +17,73 @@ namespace M05_UF3_EntregaP4_DesignAndCode
             public string email;
             public string username;
             public string password;
+            public ListaDeseos listaDeseos;
+            public CarritoCompra carritoCompra;
+
+            public void AddListaDeseos(Producto productoDeseado)
+            {
+
+            }
+
 
         }
 
 
-        public abstract class Product
+        public class Producto
         {
             public int id;
-            public string nombre;
+            public string nombreProducto;
             public string marca;
-            public string imagenURL;
             public string descripcion;
-            public float precioBase;
+            public string imagenURL;
+            public float precio;
             public float descuento;
-
-
+            public Categoria categoria;
+            public List<string> etiqueta;
+            public List<Resena> resena;
 
         }
-        public abstract class Categoria
+
+
+        public class Categoria
         {
             public string nomCategoria;
             public string nomSubcategoria;
             public string nomSubcategoria2;
         }
 
+        public class ListaDeseos
+        {
+            public List <Producto> productoDeseo;
+        }
 
+        public class CarritoCompra
+        {
+            public List <DetallePedido> productoPedido;
+            public float precioPedido;
+        }
+
+        public class DetallePedido
+        {
+            public Producto productoPedido;
+            public int cantidad;
+            public float precioProducto;
+        }
+
+        public class Pedido: CarritoCompra
+        {
+            public int numeroPedido;
+            public Usuario usuario;
+            public DateTime fechaPedido;
+
+        }
+        
+        public class Resena
+        {
+            public Usuario usuario;
+            public int valoracionResena;
+            public string comentarioResena;
+        }
 
 
 
